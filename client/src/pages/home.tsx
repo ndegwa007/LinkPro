@@ -3,6 +3,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { ProjectCard } from "@/components/project-card";
 import { SocialLinks } from "@/components/social-links";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { Footer } from "@/components/footer"; // Added import
 import { siteConfig } from "@/lib/config";
 
 export default function Home() {
@@ -54,6 +55,7 @@ export default function Home() {
           ))}
         </div>
       </motion.div>
+      <Footer /> {/* Added Footer component */}
     </div>
   );
 }

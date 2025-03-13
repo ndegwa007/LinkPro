@@ -1,7 +1,7 @@
 import { SiGithub, SiX, SiLinkedin } from "react-icons/si";
 
 export const siteConfig = {
-  name: "John Doe",
+  name: "Martin Ndegwa",
   title: "Frontend Developer",
   description: "Crafting beautiful web experiences with modern technologies",
   bio: "Passionate about creating performant and accessible web applications",

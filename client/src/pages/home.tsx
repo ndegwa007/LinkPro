@@ -2,11 +2,16 @@ import { motion } from "framer-motion";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { ProjectCard } from "@/components/project-card";
 import { SocialLinks } from "@/components/social-links";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { siteConfig } from "@/lib/config";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-primary/5 px-4 py-16">
+      <div className="fixed top-4 right-4">
+        <ThemeToggle />
+      </div>
+
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

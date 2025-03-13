@@ -1,31 +1,12 @@
-import { motion, useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { ProjectCard } from "@/components/project-card";
 import { SocialLinks } from "@/components/social-links";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Footer } from "@/components/footer";
 import { siteConfig } from "@/lib/config";
-import { useEffect } from "react";
 
 export default function Home() {
-  const controls = useAnimation();
-
-  useEffect(() => {
-    const startAnimation = async () => {
-      while (true) {
-        await controls.start({ x: "-100%", transition: { duration: 20, ease: "linear" } });
-        await controls.set({ x: "0%" });
-      }
-    };
-    startAnimation();
-  }, [controls]);
-
-  const handleWheel = (e: React.WheelEvent) => {
-    const container = e.currentTarget;
-    container.scrollLeft += e.deltaY;
-    e.preventDefault();
-  };
-
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-primary/5 px-4 py-16">
       <div className="fixed top-4 right-4">
@@ -68,22 +49,10 @@ export default function Home() {
           <SocialLinks />
         </div>
 
-        <div 
-          className="overflow-hidden -mx-4 px-4"
-          onWheel={handleWheel}
-          style={{ scrollBehavior: 'smooth', msOverflowStyle: 'none', scrollbarWidth: 'none' }}
-        >
-          <motion.div 
-            className="flex space-x-6 min-w-max py-4"
-            animate={controls}
-            initial={{ x: "0%" }}
-          >
-            {[...siteConfig.projects, ...siteConfig.projects].map((project, index) => (
-              <div key={`${project.title}-${index}`} className="w-[350px]">
-                <ProjectCard {...project} index={index} />
-              </div>
-            ))}
-          </motion.div>
+        <div className="grid gap-6 md:grid-cols-2">
+          {siteConfig.projects.map((project, index) => (
+            <ProjectCard key={project.title} {...project} index={index} />
+          ))}
         </div>
       </motion.div>
       <Footer />

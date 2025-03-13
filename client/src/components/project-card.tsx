@@ -14,15 +14,17 @@ interface ProjectCardProps {
 export function ProjectCard({ title, description, link, image, tags, index }: ProjectCardProps) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, scale: 0.9 }}
+      animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.4, delay: index * 0.1 }}
+      whileHover={{ scale: 1.02 }}
+      className="h-full"
     >
       <a 
         href={link}
         target="_blank"
         rel="noopener noreferrer"
-        className="block h-full transition-transform hover:scale-[1.02]"
+        className="block h-full"
       >
         <Card className="h-full overflow-hidden border-2 hover:border-primary/50">
           <div 

@@ -3,7 +3,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { ProjectCard } from "@/components/project-card";
 import { SocialLinks } from "@/components/social-links";
 import { ThemeToggle } from "@/components/theme-toggle";
-import { Footer } from "@/components/footer"; // Added import
+import { Footer } from "@/components/footer";
 import { siteConfig } from "@/lib/config";
 
 export default function Home() {
@@ -49,13 +49,22 @@ export default function Home() {
           <SocialLinks />
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2">
-          {siteConfig.projects.map((project, index) => (
-            <ProjectCard key={project.title} {...project} index={index} />
-          ))}
+        <div className="overflow-x-auto pb-4 -mx-4 px-4">
+          <motion.div 
+            className="flex space-x-6 min-w-max"
+            initial={{ x: 100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            {siteConfig.projects.map((project, index) => (
+              <div key={project.title} className="w-[350px]">
+                <ProjectCard {...project} index={index} />
+              </div>
+            ))}
+          </motion.div>
         </div>
       </motion.div>
-      <Footer /> {/* Added Footer component */}
+      <Footer />
     </div>
   );
 }

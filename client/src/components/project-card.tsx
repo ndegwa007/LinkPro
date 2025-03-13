@@ -22,16 +22,16 @@ export function ProjectCard({ title, description, link, image, tags, index }: Pr
         href={link}
         target="_blank"
         rel="noopener noreferrer"
-        className="block transition-transform hover:scale-[1.02]"
+        className="block h-full transition-transform hover:scale-[1.02]"
       >
-        <Card className="overflow-hidden border-2 hover:border-primary/50">
+        <Card className="h-full overflow-hidden border-2 hover:border-primary/50">
           <div 
             className="h-48 bg-cover bg-center"
             style={{ backgroundImage: `url(${image})` }}
           />
-          <CardHeader>
-            <CardTitle className="text-xl font-bold">{title}</CardTitle>
-            <CardDescription>{description}</CardDescription>
+          <CardHeader className="space-y-2">
+            <CardTitle className="text-xl font-bold line-clamp-1">{title}</CardTitle>
+            <CardDescription className="line-clamp-2">{description}</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="flex flex-wrap gap-2">

@@ -6,7 +6,7 @@ export const siteConfig = {
   title: "Frontend Developer",
   description: "Crafting beautiful web experiences with modern technologies",
   bio: "Passionate about creating performant and accessible web applications",
-  email: "contact@martinndegwa.com", // Added email
+  email: "contact@martinndegwa.com",
   avatar: "https://images.unsplash.com/photo-1499557354967-2b2d8910bcca",
   projects: [
     {
@@ -22,6 +22,27 @@ export const siteConfig = {
       link: "https://tasks.example.com", 
       image: "https://images.unsplash.com/photo-1626690396940-8929be269d23",
       tags: ["Next.js", "Prisma", "tRPC"]
+    },
+    {
+      title: "Weather Dashboard",
+      description: "Real-time weather tracking with beautiful visualizations",
+      link: "https://weather.example.com",
+      image: "https://images.unsplash.com/photo-1592210454359-9043f067919b",
+      tags: ["Vue.js", "D3.js", "Weather API"]
+    },
+    {
+      title: "E-Commerce Platform",
+      description: "Full-featured online store with payment integration",
+      link: "https://store.example.com",
+      image: "https://images.unsplash.com/photo-1472851294608-062f824d29cc",
+      tags: ["React", "Node.js", "Stripe"]
+    },
+    {
+      title: "Social Media Dashboard",
+      description: "Analytics dashboard for social media management",
+      link: "https://social.example.com",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+      tags: ["Angular", "Chart.js", "Firebase"]
     }
   ],
   social: [

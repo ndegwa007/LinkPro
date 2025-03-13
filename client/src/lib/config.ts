@@ -1,10 +1,12 @@
 import { SiGithub, SiX, SiLinkedin } from "react-icons/si";
+import { Mail } from "lucide-react";
 
 export const siteConfig = {
   name: "Martin Ndegwa",
   title: "Frontend Developer",
   description: "Crafting beautiful web experiences with modern technologies",
   bio: "Passionate about creating performant and accessible web applications",
+  email: "contact@martinndegwa.com", // Added email
   avatar: "https://images.unsplash.com/photo-1499557354967-2b2d8910bcca",
   projects: [
     {
@@ -23,6 +25,11 @@ export const siteConfig = {
     }
   ],
   social: [
+    {
+      name: "Email",
+      url: "mailto:contact@martinndegwa.com",
+      icon: Mail
+    },
     {
       name: "GitHub",
       url: "https://github.com/yourusername",

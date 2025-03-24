@@ -66,13 +66,13 @@ export const siteConfig = {
       icon: SiGithub
     },
     {
-      name: "Twitter",
-      url: "https://twitter.com/yourusername",
+      name: "X",
+      url: "https://x.com/iNdegwa_",
       icon: SiX
     },
     {
       name: "LinkedIn",
-      url: "https://linkedin.com/in/yourusername",
+      url: "https://linkedin.com/in/martin-ndegwa007/",
       icon: SiLinkedin
     }
   ]
